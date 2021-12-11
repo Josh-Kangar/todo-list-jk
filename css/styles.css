@@ -1,0 +1,23 @@
+div.container {
+  margin: 50px auto;
+  max-width: 500px;
+}
+
+html {
+  background: linear-gradient(to right top, #e04040, #5851b3, #34b0cf, #3cf6e7, #3cf690);
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  font-size: 25px;
+  color: rgba(39, 35, 35, 0.842);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
