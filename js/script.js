@@ -5,31 +5,40 @@ var addInput = document.getElementById("todo-input");
 function createTodo() {
   var text = addInput.value;
 
-  if (text == "") {
-    return;
-  }
+  if(text.length > 35) {
+    alert("No more than 35 characters! You entered " + text.length + " characters.")
+    addInput.value = "";
+  } else {
 
-  var li = document.createElement("li");
 
-  var checkbox = document.createElement("input");
-  checkbox.classList.add("checkbox");
-  checkbox.type = "checkbox";
+    if (text == "") {
+      return;
+    }
 
-  var paragraph = document.createElement("p");
-  paragraph.classList.add("paragraph");
-  paragraph.textContent = text;
+    var li = document.createElement("li");
 
-  var remove = document.createElement("span");
-  remove.classList.add("remove");
-  remove.innerHTML = "&cross;";
+    var checkbox = document.createElement("input");
+    checkbox.classList.add("checkbox");
+    checkbox.type = "checkbox";
 
-  li.appendChild(checkbox);
-  li.appendChild(paragraph);
-  li.appendChild(remove);
-  list.appendChild(li);
+    var paragraph = document.createElement("p");
+    paragraph.classList.add("paragraph");
+    paragraph.textContent = text;
 
-  addInput.value = "";
+    var remove = document.createElement("span");
+    remove.classList.add("remove");
+    remove.innerHTML = "&cross;";
 
+    li.appendChild(checkbox);
+    li.appendChild(paragraph);
+    li.appendChild(remove);
+    list.appendChild(li);
+
+    
+    
+
+    addInput.value = "";
+ }
 
 }
 
