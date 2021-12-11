@@ -3,9 +3,40 @@ div.container {
   max-width: 500px;
 }
 
-li {
-  background:#40d3d3f5;
+ul {
+  list-style-type: none;
+  display: inline;
+}
+
+ul li {
+  background:#188ff1f5;
   padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8%;
+  position: relative;
+  border: black solid 2px;
+   
+}
+
+/* these classes are the children of the li  */
+
+.remove {
+ /* display: inline; */
+ float: right;
+ margin-left: 10px;
+}
+
+.paragraph{
+ display: inline;
+ background: lemonchiffon;
+ /* width: auto; */
+}
+
+.checkbox {
+ float: left;
+ margin-top: 10px;
+ margin-right: 10px;
+
 }
 
 html {
@@ -21,11 +52,42 @@ body{
 
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  font-size: 20px;
+#todo-add {
+  border: 2px solid #8f25d6;
+  background-color: #8f25d6;
+  border-radius: 8%;
+  width: 100px;
+  height: 45px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  padding: 5px 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
 }
+
+#todo-add:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+input  {
+  border: none;
+}
+
+input#todo-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  background: transparent;
+  border-bottom: 2px solid #8f25d6 ;  
+}
+
+input#todo-input::placeholder {
+  color: transparent;
+  
+}
+
 div.container {
   margin: 50px auto;
   max-width: 500px;
@@ -62,6 +124,8 @@ div#header div#input-container input#todo-input:placeholder-shown ~ label {
   color: white;
   font-size: 30px;
   font-weight: 100;
+  /* border: rgb(128, 30, 0) 2px solid; */
+
 }
 
 div#header div#input-container input#todo-input:focus~ label {
@@ -69,4 +133,5 @@ div#header div#input-container input#todo-input:focus~ label {
   font-size: 16px;
   color: #766fd6;
   font-weight: 600;
+  /* border: green 2px solid; */
 }
