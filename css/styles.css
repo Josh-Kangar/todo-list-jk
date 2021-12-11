@@ -3,6 +3,11 @@ div.container {
   max-width: 500px;
 }
 
+li {
+  background:#40d3d3f5;
+  padding: 10px;
+}
+
 html {
   background: linear-gradient(to right top, #e04040, #5851b3, #34b0cf, #3cf6e7, #3cf690);
   height: 100%;
@@ -20,4 +25,48 @@ input {
   width: 100%;
   padding: 10px;
   font-size: 20px;
+}
+div.container {
+  margin: 50px auto;
+  max-width: 500px;
+}
+
+h1#title {
+  text-align: center;
+  margin-bottom: 50px
+}
+
+div#header {
+  text-align: center;
+}
+
+div#header div#input-container {
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 15px;
+}
+
+div#header div#input-container label {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  display: block;
+  transition: 0.25s;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+
+div#header div#input-container input#todo-input:placeholder-shown ~ label {
+  top: 30px;
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+div#header div#input-container input#todo-input:focus~ label {
+  top: 0;
+  font-size: 16px;
+  color: #766fd6;
+  font-weight: 600;
 }
