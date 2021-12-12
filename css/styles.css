@@ -12,10 +12,11 @@ ul li {
   background:#188ff1f5;
   padding: 10px;
   margin-bottom: 15px;
-  border-radius: 8%;
+  border-radius: 10px 40px;
   position: relative;
-  border: black solid 2px;
-   
+  /* border: black solid 2px; */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: 0.25s;
 }
 
 /* these classes are the children of the li  */
@@ -28,7 +29,7 @@ ul li {
 
 .paragraph{
  display: inline;
- background: lemonchiffon;
+ /* background: rgb(236, 130, 88); */
  /* width: auto; */
 }
 
@@ -39,6 +40,13 @@ ul li {
 
 }
 
+.complete {
+  
+  background: #53e040;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
 html {
   background: linear-gradient(to right top, #e04040, #5851b3, #34b0cf, #3cf6e7, #3cf690);
   height: 100%;
@@ -47,7 +55,7 @@ html {
 
 body{
   font-size: 25px;
-  color: rgba(39, 35, 35, 0.842);
+  color: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
