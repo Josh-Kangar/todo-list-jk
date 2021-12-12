@@ -42,6 +42,46 @@ function createTodo() {
 
 }
 
+function showEditInput() {
+  // alert('show edit input');
+  
+};
+
+function removeTodo(removeElement) {
+    // alert('remove todo');
+    removeElement.parentElement.remove();
+};
+
+function toggleComplete(toggleTarget) {
+    // alert("toggle complete");
+    if (toggleTarget.checked === false) {
+      toggleTarget.parentElement.classList.remove("complete");
+    } else {
+      toggleTarget.parentElement.classList.add("complete");
+    }
+};
+
+list.addEventListener("click", function(e){
+
+    switch(e.target.tagName) {
+      case "P":
+        showEditInput();
+        break;
+      case "SPAN":
+        removeTodo(e.target);
+        break;
+
+    }
+});
+
+list.addEventListener("change", function (e) {
+    if(e.target.tagName === "INPUT" && e.target.type === "checkbox"){
+      toggleComplete(e.target);
+    };
+});
+
+
+
 addBtn.addEventListener("click", createTodo);
 
 addInput.addEventListener("keypress", function(e) {
