@@ -44,12 +44,15 @@ function createTodo() {
 
 function showEditInput() {
   // alert('show edit input');
-  
 };
 
 function removeTodo(removeElement) {
     // alert('remove todo');
-    removeElement.parentElement.remove();
+  
+    var r = confirm("are you sure ou want to remove '" + removeElement.previousElementSibling.textContent+ "'?");
+    if (r) {
+      removeElement.parentElement.remove();
+    } 
 };
 
 function toggleComplete(toggleTarget) {
